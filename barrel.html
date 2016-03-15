@@ -4,7 +4,7 @@
 <p id="2"></p>
 <script>
 var ind = 1
-var l = 0;
+var window.l = 0;
   function addv(id,evt,fun) {
 	var obj1 = document.getElementById(id)
 	obj1.addEventListener(evt, function(e){
@@ -17,9 +17,9 @@ var l = 0;
 }
 function handle(a,b){
   if (ind==0) {
-  	l=a
+  	window.l=a
   }
-  if (a>l) {
+  if (a>window.l) {
   	document.getElementById("2").innerHTML = "a :"+a+" l:"+l
   }
   ind += 1 
