@@ -1,6 +1,7 @@
 <html>
 <body>
-<img style="background-size: cover;opacity: 0" src="http://fat.gfycat.com/ElasticShallowBasenji.gif" width="70%" height="auto">
+<img id="1" style="background-size: cover;opacity: 0" src="http://fat.gfycat.com/ElasticShallowBasenji.gif" width="70%" height="auto">
+<p id="2"></p>
 <script>
   function addv(id,evt,fun) {
 	var obj1 = document.getElementById(id)
@@ -13,8 +14,9 @@
     }, false)
 }
 function handle(a,b){
-  alert(a,b)
+  document.getElementById("2").innerHTML = "X pos:"+a+" Y pos:"+b
 }
+addv("1","touchmove",handle)
 </script>
 </body>
 </html>
