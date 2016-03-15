@@ -1,5 +1,20 @@
 <html>
 <body>
-<img style="background-size: cover;" src="http://fat.gfycat.com/ElasticShallowBasenji.gif" width="70%" height="auto">
+<img style="background-size: cover;opacity: 0" src="http://fat.gfycat.com/ElasticShallowBasenji.gif" width="70%" height="auto">
+<script>
+  function addv(id,evt,fun) {
+	var obj1 = document.getElementById(id)
+	obj1.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0] // reference first touch point (ie: first finger)
+        x = parseInt(touchobj.clientX)		// get x position of touch point relative to left edge of browser
+		y = parseInt(touchobj.clientY)      // get y position of touch point relative to left edge of browser
+		fun(x,y)
+        e.preventDefault()
+    }, false)
+}
+function handle(a,b){
+  alert(a,b)
+}
+</script>
 </body>
 </html>
