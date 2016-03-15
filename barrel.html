@@ -21,8 +21,10 @@ function handle(a,b){
   }
   if (a>window.l) {
   	document.getElementById("2").innerHTML = "a :"+a+" l:"+l+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  	ind = 1
+  } else {
+  	document.getElementById("2").innerHTML = "a :"+a+" l:"+l
   }
-  document.getElementById("2").innerHTML = "a :"+a+" l:"+l
   ind += 1 
 }
 addv("1","touchmove",handle)
