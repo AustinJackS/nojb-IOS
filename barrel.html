@@ -4,6 +4,7 @@
 <p id="2"></p>
 <script>
 var ind = 1
+var toen = 0;
 window.l = 0
   function addv(id,evt,fun) {
 	var obj1 = document.getElementById(id)
@@ -16,18 +17,24 @@ window.l = 0
     }, false)
 }
 function handle(a,b){
+	
   if (ind==1) {
   	window.l=a
   }
   if (a>window.l) {
   	document.getElementById("2").innerHTML = "a :"+a+" l:"+l+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-  	ind = 1
-  } else {
-  	document.getElementById("2").innerHTML = "a :"+a+" l:"+l
+  }
+  if (toen==1) {
+  	ind = 1	
   }
   ind += 1 
+  toen = 0
+}
+function en() {
+	var toen=1;
 }
 addv("1","touchmove",handle)
+addv("1","touchend",en)
 </script>
 </body>
 </html>
