@@ -55,7 +55,8 @@ function handleTouchMove(evt) {
         if ( xDiff > 0 ) {
             /* left swipe */ 
             document.getElementById("1").src = "http://fat.gfycat.com/ElasticShallowBasenji.gif";
-            document.getElementById("1").style.opacity = 0;
+            document.getElementById("1").style.opacity = 1;
+            document.getElementById("icons1").style.opacity = 0;
             setTimeout(rev, 1700);
         } else {
             /* right swipe */
@@ -73,7 +74,8 @@ function handleTouchMove(evt) {
     evt.preventDefault()
 };
 function rev() {
-	document.getElementById("1").style.opacity = 1;
+	document.getElementById("1").style.opacity = 0;
+	document.getElementById("icons1").style.opacity = 1;
 }
 </script>
 </body>
